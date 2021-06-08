@@ -51,7 +51,7 @@ function scene:create( event )
   local lblHighScore = display.newText("Highscore: " .. utilities:getHighscore(), _CX, _CY + 50, "Pumpkin Pancakes.ttf", 16)
   grpMain:insert(lblHighScore)
 
-  local lblHighScore = display.newText("restart: " .. utilities:getHighscore(), _CX, _CY - 50, "Pumpkin Pancakes.ttf", 16)
+  local lblHighScore = display.newText("restart", _CX, _CY - 50, "Pumpkin Pancakes.ttf", 16)
   grpMain:insert(lblHighScore)
 
   if isHighScore == true then
