@@ -51,8 +51,12 @@ function scene:create( event )
   local lblHighScore = display.newText("Highscore: " .. utilities:getHighscore(), _CX, _CY + 50, "Pumpkin Pancakes.ttf", 16)
   grpMain:insert(lblHighScore)
 
-  local lblHighScore = display.newText("restart", _CX, _CY - 50, "Pumpkin Pancakes.ttf", 16)
-  grpMain:insert(lblHighScore)
+  local btnPlay = display.newText("Restart", _CX, _CY - 80, "Pumpkin Pancakes.ttf", 25)
+  grpMain:insert(btnPlay)
+
+  btnPlay:addEventListener("tap", function() 
+    composer.gotoScene("scenes.game")
+  end)
 
   if isHighScore == true then
     local lblNewHighscore = display.newText("New Highscore :D", _CX, _CY - 50, "Pumpkin Pancakes.ttf", 20)
